@@ -84,7 +84,7 @@ Easily generate professional and customizable terms and conditions for your webs
 
     </div>
     <div class="col-lg-3">
-<form class="px-2 py-2 bg-dark text-light"><label for="website-name" class="small mb-0">Website name ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="website-name" placeholder="Website name" aria-label="Website name" requiered><label for="website-url" class="small mb-0">Website URL ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="url" id="website-url" placeholder="websiteurl.com" aria-label="Website URL" requiered><label for="company-name" class="small mb-0">Company name (optional)</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="company-name" placeholder="Company A.B LLC" aria-label="Company name"><label for="country" class="small mb-0">Country ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="company-country" placeholder="United states" aria-label="Country" requiered><div class="text-center mt-4"><button id="copy-button" class="fw-semibold text-light bg-success border border-success rounded-pill text-heading-3 fs-3 px-5" type="button" value="Copy">Copy <i class="bi bi-check-circle-fill"></i></button></div></form>
+<form class="px-2 py-2 bg-dark text-light"><label for="website-name" class="small mb-0">Website name ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="website-name" placeholder="Website name" aria-label="Website name" requiered><label for="website-url" class="small mb-0">Website URL ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="url" id="website-url" placeholder="websiteurl.com" aria-label="Website URL" requiered><label for="company-name" class="small mb-0">Company name (optional)</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="company-name" placeholder="Company A.B LLC" aria-label="Company name"><label for="country" class="small mb-0">Country ✱</label><input class="form-control text-dark form-control-sm px-1 border-bottom border-success border-1 m-0 mb-2" type="text" id="company-country" placeholder="United states" aria-label="Country" requiered><div class="text-center mt-4"><button onclick="CopyToClipboard('editor')" id="copy-button" class="fw-semibold text-light bg-success border border-success rounded-pill text-heading-3 fs-3 px-5" type="button" value="Copy">Copy <i class="bi bi-check-circle-fill"></i></button></div></form>
     </div>
   </div>
 </div>
@@ -132,7 +132,7 @@ var t=new Date;t.setDate(t.getDate()),$("#date").html(t.getDate()+" "+["January"
 });
 
 
-
+function CopyToClipboard(e){var t,o,n=document,d=n.getElementById(e);n.body.createTextRange?((t=n.body.createTextRange()).moveToElementText(d),t.select(),t.mouseup()):window.getSelection&&(o=window.getSelection(),(t=n.createRange()).selectNodeContents(d),o.removeAllRanges(),o.addRange(t)),document.execCommand("copy"),document.getElementById("copy-button").value="Copied"};
 
 
 
